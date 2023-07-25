@@ -28,7 +28,7 @@ const Header = () => {
       {/* searchbar */}
       <div className={headerStyles.input}>
         {/* input */}
-        <input type="text" value="Search numbers, names and more" />
+        <input type="text" name="Search numbers, names and more" />
 
         {/* e */}
         <div className={headerStyles.e}>

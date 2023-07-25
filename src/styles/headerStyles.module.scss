@@ -9,7 +9,7 @@
 .bar {
   @include smallDevices {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     .time {
       display: flex;
@@ -38,15 +38,18 @@
       text-align: center;
       color: #fff;
       position: relative;
+      &::placeholder{
+        color: #fff;
+        font-size: 29px;
+      }
     }
     .e {
       border-radius: 3rem;
-      width: 45px;
-      height: 45px;
+      width: 40px;
+      height: 40px;
       background-color: blue;
-      position: absolute;
       transform: translateY(-52px);
-      margin-left: 0.3rem;
+      margin-left: 0.9rem;
       font-size: 24px;
       p {
         color: #fff;
@@ -57,7 +60,6 @@
         width: 15px;
         height: 15px;
         background-color: red;
-        position: absolute;
         z-index: 1000;
         transform: translateY(-50px);
         margin-left: 1.7rem;

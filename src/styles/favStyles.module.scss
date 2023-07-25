@@ -1,0 +1,44 @@
+@import "./breakpoints.scss";
+
+
+.fav{
+    @include smallDevices{
+      width: 380px;
+      height: 300px;
+    }
+}
+
+.favWrapper{
+    @include smallDevices{
+       display: flex;
+       .friend{
+        width: 50px;
+        height: 50px;
+        border-radius: 3rem;
+        background: #fff;
+        margin-top: 3rem;
+        text-align: center;
+        h1{
+            padding: 10px 0px;
+        }
+       }
+
+       .callLogs{
+        display: grid;
+        color: #fff;
+        margin-top: 3rem;
+        .callLogsNames{
+            display: flex;
+            gap: 0.5rem;
+        }
+       }
+       .arrow{
+        font-size: 29px;
+        color: red;
+        margin-top: 3.5rem;
+        margin-left: 6rem;
+       }
+      }
+
+
+}
