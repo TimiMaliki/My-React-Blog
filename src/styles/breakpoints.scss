@@ -1,0 +1,33 @@
+$smallDevices : 400px;
+$mediumDevices : 550px;
+$largeDevices : 700px;
+$largerDevices : 1100px;
+$xtralargeDevices : 1200px;
+
+@mixin smallDevices{
+    @media(max-width:$smallDevices){
+        @content;
+    }
+}
+
+
+@mixin mediumDevices{
+    @media(min-width:$mediumDevices){
+        @content;
+    }
+}
+
+
+
+@mixin largeDevices{
+    @media(min-width:$largeDevices){
+        @content;
+    }
+}
+
+
+@mixin xtralargeDevices{
+    @media(min-width:$xtralargeDevices){
+        @content;
+    }
+}

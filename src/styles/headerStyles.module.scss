@@ -1,0 +1,67 @@
+@import "./breakpoints.scss";
+
+.header {
+  @include smallDevices {
+    text-align: center;
+    height: 300px;
+  }
+}
+.bar {
+  @include smallDevices {
+    display: flex;
+    justify-content: space-between;
+
+    .time {
+      display: flex;
+      font-size: 24px;
+      color: #fff;
+      margin-top: 2rem;
+    }
+    .battery {
+      display: flex;
+      font-size: 24px;
+      color: #fff;
+      margin-top: 2rem;
+    }
+  }
+}
+.input {
+  @include smallDevices {
+    input {
+      width: 380px;
+      height: 59px;
+      margin-top: 3rem;
+      border: 1px solid grey;
+      border-radius: 9px;
+      background: #333;
+      font-size: 19px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    .e {
+      border-radius: 3rem;
+      width: 45px;
+      height: 45px;
+      background-color: blue;
+      position: absolute;
+      transform: translateY(-52px);
+      margin-left: 0.3rem;
+      font-size: 24px;
+      p {
+        color: #fff;
+        padding: 10px 10px;
+      }
+      .ep {
+        border-radius: 3rem;
+        width: 15px;
+        height: 15px;
+        background-color: red;
+        position: absolute;
+        z-index: 1000;
+        transform: translateY(-50px);
+        margin-left: 1.7rem;
+      }
+    }
+  }
+}
