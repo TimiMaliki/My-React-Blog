@@ -8,10 +8,10 @@ import {
 
 const CloseFriends = () => {
   return (
-    <div>
+    <div className=''>
 
 {/* one */}
-      <div className="flex gap-2 mb-8">
+      <div className="flex justify-between gap-2 mb-8">
         {/* //friends */}
         <div className="bg-slate-300 w-20 h-20 rounded-full flex justify-center text-center">
                <h1 className='mt-8'>T</h1>
@@ -44,7 +44,7 @@ const CloseFriends = () => {
 
 
 {/* two */}
-<div className="flex gap-2 mb-8">
+<div className="flex justify-between gap-2 mb-8">
         {/* //friends */}
         <div className="bg-slate-300 w-20 h-20 rounded-full flex justify-center text-center">
                <h1 className='mt-8'>T</h1>
@@ -73,7 +73,7 @@ const CloseFriends = () => {
 
 
 {/* thjree */}
-<div className="flex gap-2 mb-8">
+<div className="flex justify-between gap-2 mb-8">
         {/* //friends */}
         <div className="bg-slate-300 w-20 h-20 rounded-full flex justify-center text-center">
                <h1 className='mt-8'>T</h1>
@@ -101,7 +101,7 @@ const CloseFriends = () => {
 
 
 {/* thjree */}
-<div className="flex gap-2 mb-8">
+<div className="flex justify-between gap-2 mb-8">
         {/* //friends */}
         <div className="bg-slate-300 w-20 h-20 rounded-full flex justify-center text-center">
                <h1 className='mt-8'>T</h1>
