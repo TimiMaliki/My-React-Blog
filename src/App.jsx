@@ -1,6 +1,6 @@
 import './App.css'
 import Header from './components/Header'
-import CallerID  from './components/Caller/CallerID'
+import Index  from './components/Caller/Index'
 import CloseFriends from './components/CloseFriends'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
 
     <div className='bg-slate-900 md:w-full lg:w-4/6 height place-center mt-12'>
     <Header />
-    <CallerID/>
+    <Index/>
 
 <div className='flex justify-center'>
 <div className="mt-12 text-center w-96 h-36  bg-red-200">
