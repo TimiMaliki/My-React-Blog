@@ -1,6 +1,6 @@
 import './App.css'
 import Header from './components/Header'
-import CallerID  from './components/CallerID'
+import CallerID  from './components/Caller/CallerID'
 import CloseFriends from './components/CloseFriends'
 
 function App() {
@@ -14,10 +14,10 @@ function App() {
     <CallerID/>
 
 <div className='flex justify-center'>
-<div className="mt-12 text-center w-40 h-36  bg-red-200 ">
-      <h1>Stay Protected</h1>
-      <h3>Allow TrueCaller to run in your backgroud...</h3>
-      <p>Allow</p>
+<div className="mt-12 text-center w-96 h-36  bg-red-200">
+      <h1 className="mb-8"> Stay Protected</h1>
+      <h3 className="mb-8">Allow TrueCaller to run in your backgroud...</h3>
+      <p className="mb-8">Allow</p>
     </div>
 </div>
    
