@@ -26,8 +26,9 @@ const Index = (props) => {
   ];
   return (
     <div className="flex  justify-between">
+
     {callersId.map((item,index) =>{
-     return   <div>
+     return   <div className="text-center">
  <CallerID 
  
  username={item.name}
