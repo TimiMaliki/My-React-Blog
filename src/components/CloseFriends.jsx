@@ -1,29 +1,29 @@
-import React from "react";
-import Fav from "../styles/favStyles.module.scss";
+import React from 'react'
 import {
     FaPhone,
     FaArrowAltCircleRight
   } from "react-icons/fa";
   
 
+
 const CloseFriends = () => {
   return (
-    <div className={Fav.fav}>
+    <div>
 
 {/* one */}
-      <div className={Fav.favWrapper}>
+      <div className="flex gap-2 mb-8">
         {/* //friends */}
-        <div className={Fav.friend}>
-               <h1>T</h1>
+        <div className="bg-slate-300 w-20 h-20 rounded-full flex justify-center text-center">
+               <h1 className='mt-8'>T</h1>
         </div>
 
         {/* //lenghtOFCall */}
-        <div className={Fav.callLogs}>
+        <div className="text-white mt-4">
 
-        <div className={Fav.callLogsNames}>
+        <div className="grid">
             <h2>Maliki</h2>
             </div>
-            <div className={Fav.callLogsNames}>
+            <div className="flex">
                 <FaPhone></FaPhone>
                 <h4>2</h4>
                 <p>Out-Going</p>
@@ -32,26 +32,31 @@ const CloseFriends = () => {
         </div>
 
 {/* //arrow */}
-<div className={Fav.arrow}>
-<FaArrowAltCircleRight></FaArrowAltCircleRight>
+<div className="text-white text-lg lg:lg:ml-96  mt-8">
+<FaArrowAltCircleRight ></FaArrowAltCircleRight>
 </div>
       </div>
 
 
- {/* two */}
-      <div className={Fav.favWrapper}>
+
+
+
+
+
+{/* two */}
+<div className="flex gap-2 mb-8">
         {/* //friends */}
-        <div className={Fav.friend}>
-               <h1>T</h1>
+        <div className="bg-slate-300 w-20 h-20 rounded-full flex justify-center text-center">
+               <h1 className='mt-8'>T</h1>
         </div>
 
         {/* //lenghtOFCall */}
-        <div className={Fav.callLogs}>
+        <div className="text-white mt-4">
 
-        <div className={Fav.callLogsNames}>
+        <div className="grid">
             <h2>Maliki</h2>
             </div>
-            <div className={Fav.callLogsNames}>
+            <div className="flex">
                 <FaPhone></FaPhone>
                 <h4>2</h4>
                 <p>Out-Going</p>
@@ -60,31 +65,27 @@ const CloseFriends = () => {
         </div>
 
 {/* //arrow */}
-<div className={Fav.arrow}>
-<FaArrowAltCircleRight></FaArrowAltCircleRight>
+<div className="text-white text-lg lg:ml-96  mt-8">
+<FaArrowAltCircleRight ></FaArrowAltCircleRight>
 </div>
       </div>
 
 
 
-
-
-{/* 
-three */}
-
-      <div className={Fav.favWrapper}>
+{/* thjree */}
+<div className="flex gap-2 mb-8">
         {/* //friends */}
-        <div className={Fav.friend}>
-               <h1>T</h1>
+        <div className="bg-slate-300 w-20 h-20 rounded-full flex justify-center text-center">
+               <h1 className='mt-8'>T</h1>
         </div>
 
         {/* //lenghtOFCall */}
-        <div className={Fav.callLogs}>
+        <div className="text-white mt-4">
 
-        <div className={Fav.callLogsNames}>
+        <div className="grid">
             <h2>Maliki</h2>
             </div>
-            <div className={Fav.callLogsNames}>
+            <div className="flex">
                 <FaPhone></FaPhone>
                 <h4>2</h4>
                 <p>Out-Going</p>
@@ -93,28 +94,26 @@ three */}
         </div>
 
 {/* //arrow */}
-<div className={Fav.arrow}>
-<FaArrowAltCircleRight></FaArrowAltCircleRight>
+<div className="text-white text-lg lg:ml-96  mt-8">
+<FaArrowAltCircleRight ></FaArrowAltCircleRight>
 </div>
       </div>
 
 
-
-{/* four */}
-
-      <div className={Fav.favWrapper}>
+{/* thjree */}
+<div className="flex gap-2 mb-8">
         {/* //friends */}
-        <div className={Fav.friend}>
-               <h1>T</h1>
+        <div className="bg-slate-300 w-20 h-20 rounded-full flex justify-center text-center">
+               <h1 className='mt-8'>T</h1>
         </div>
 
         {/* //lenghtOFCall */}
-        <div className={Fav.callLogs}>
+        <div className="text-white mt-4">
 
-        <div className={Fav.callLogsNames}>
+        <div className="grid">
             <h2>Maliki</h2>
             </div>
-            <div className={Fav.callLogsNames}>
+            <div className="flex">
                 <FaPhone></FaPhone>
                 <h4>2</h4>
                 <p>Out-Going</p>
@@ -123,14 +122,14 @@ three */}
         </div>
 
 {/* //arrow */}
-<div className={Fav.arrow}>
-<FaArrowAltCircleRight></FaArrowAltCircleRight>
+<div className="text-white text-lg lg:ml-96  mt-8">
+<FaArrowAltCircleRight ></FaArrowAltCircleRight>
 </div>
       </div>
 
-
+      
     </div>
-  );
-};
+  )
+}
 
-export default CloseFriends;
+export default CloseFriends
