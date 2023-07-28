@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
     FaClock,
     FaHeadphones,
@@ -9,6 +9,7 @@ import {
   
 
 const Header = () => {
+
   return (
     <div className=''>
 
@@ -32,8 +33,7 @@ const Header = () => {
  {/* searchbar */}
  <div className="mt-8 h-16 flex justify-center">
         {/* input */}
-        <input type="text" name="Search numbers, names and more"  className='flex justify-center text-center w-96 h-12 mt-2 rounded text-black'/>
-
+        <input type="text" name="Search numbers, names and more"  className='flex justify-center text-center w-96 h-12 mt-2 rounded text-black' />
         </div>
 
  {/* e */}

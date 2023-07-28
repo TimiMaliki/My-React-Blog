@@ -2,7 +2,17 @@ import React from "react";
 import CallerID from "../Caller/CallerID";
 import CloseFriends from "./CloseFriends";
 
-const Index = () => {
+const Index = (props) => {
+
+
+ 
+
+  const firstName = (name) =>{
+         
+    return name.charAt(0)
+  }
+  
+  
   const callersId = [
     {
       name: "Timi",
@@ -52,7 +62,7 @@ const Index = () => {
           return (
             <div className="text-center">
               <CallerID
-                username={item.name}
+                username={firstName(item.name)}
                 guyName={item.nickName}
                 contact={item.contact}
               />
@@ -60,6 +70,7 @@ const Index = () => {
           );
         })}
       </div>
+
 
       <div className="flex justify-center">
         <div className="mt-12 text-center w-96 h-36  bg-red-200">
@@ -69,17 +80,16 @@ const Index = () => {
         </div>
       </div>
 
-{recentCalls.map((i,index)=>{
-    return <div>
+{recentCalls.map((call,index)=>{
+    return <div className="mt-8">
   <CloseFriends 
-  username={i.name}
-  guyName={i.nickName}
+  username={firstName(call.name)}
+  guyName={call.nickName}
   
   />
     </div>
 })}
 
-    
     </div>
   );
 };
