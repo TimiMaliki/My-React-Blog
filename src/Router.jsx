@@ -34,12 +34,13 @@ const Router = () => {
       body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequatur expedita, assumenda similique non optio! Modi nesciunt excepturi corrupti atque blanditiis quo nobis, non optio quae possimus illum exercitationem ipsa!"
     }
   ])
-const {search ,setSearch} = useState('')
+// const [search ,setSearch] = useState('');
+const  [searchResults, setSearchResults] = useState ([])
   return (
     <Routes> 
 <Route>
  <Route path='' element={<MainLayout />} >
-    <Route index path='' element={<Home />}/>
+    <Route index path='' element={<Home posts={posts}/>}/>
     <Route path='/newpage' element={<NewPage/>}/>
     <Route path='/postpage' element={<PostPage />}/>
     <Route path='*' element={<Missing />}/>
@@ -52,3 +53,4 @@ const {search ,setSearch} = useState('')
 }
 
 export default Router
+
