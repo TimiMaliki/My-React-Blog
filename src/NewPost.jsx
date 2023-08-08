@@ -1,4 +1,4 @@
-const NewPage = ({
+const NewPost = ({
   handleSubmit, postTitle, setPostTitle, postBody, setPostBody
 }) => {
   return (
@@ -26,4 +26,4 @@ const NewPage = ({
   )
 }
 
-export default NewPage
+export default NewPost

@@ -1,11 +1,12 @@
 import "./App.css";
 import MainLayout from './MainLayout'
 import Home from './Home';
-import NewPage from './NewPage';
+import NewPost from './NewPost';
 import PostPage from './PostPage';
 import About from './About';
 import Missing from './Missing';
 import { useState, useEffect } from 'react';
+import { format } from 'date-fns';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 
 
@@ -76,7 +77,7 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
           />}>
             <Route index element={<Home posts={searchResults} />} />
             <Route path="post">
-              <Route index element={<NewPage
+              <Route index element={<NewPost
                 handleSubmit={handleSubmit}
                 postTitle={postTitle}
                 setPostTitle={setPostTitle}
