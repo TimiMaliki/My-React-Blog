@@ -8,7 +8,7 @@ import { Outlet } from "react-router-dom";
 const MainLayout = ({ search, setSearch }) => {
     return (
         <div className="App">
-            <Header title="Blog" />
+            <Header title="Maliki Blog" />
             <Nav search={search} setSearch={setSearch} />
             <Outlet />
             <Footer />
