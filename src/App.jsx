@@ -18,7 +18,8 @@ function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [postTitle, setPostTitle] = useState("");
   const [postBody, setPostBody] = useState("");
-  const navigate = useNavigate();
+  const [editTitle, setEditTitle] = useState('');
+  const [editBody, setEditBody] = useState('');
   const history = useHistory();
 
   useEffect(() =>{
@@ -50,32 +51,31 @@ function App() {
     const datetime = format(new Date(), "MMMM dd, yyyy pp");
     const newPost = { id, title: postTitle, datetime, body: postBody };
     try{
-   
+      const response = await Api.post('/posts', newPost);
     const allPosts = [...posts, response.data];
     setPosts(allPosts);
     setPostTitle("");
     setPostBody("");
-    navigate("/");
     history.push('/');
     }catch(err){
        console.log(`Error:${err.message}`);
     }
   };
 
-
+const handleEdit = async (id) => {
   
+}
 
-  const handleDelete =  async (id) => {
-    try{
-      await Api.delete(`/posts/${id}`)
-    const postsList = posts.filter((post) => post.id !== id);
-    setPosts(postsList);
-    navigate("/");
-    history.push('/');
-    }catch(err){
-      console.log(`Error:${err.message}`);
-   }
-  };
+  const handleDelete = async (id) => {
+    try {
+      await Api.delete(`/posts/${id}`);
+      const postsList = posts.filter(post => post.id !== id);
+      setPosts(postsList);
+      history.push('/');
+    } catch (err) {
+      console.log(`Error: ${err.message}`);
+    }
+  }
 
   return (
     <Routes>
