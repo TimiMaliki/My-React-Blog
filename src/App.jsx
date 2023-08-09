@@ -6,6 +6,7 @@ import PostPage from "./PostPage";
 import About from "./About";
 import Missing from "./Missing";
 import Api from './API/Posts' 
+import Edit from "./Edit";
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import {useHistory} from "use-history"
@@ -62,9 +63,19 @@ function App() {
     }
   };
 
-const handleEdit = async (id) => {
-  
-}
+  const handleEdit = async (id) => {
+    const datetime = format(new Date(), 'MMMM dd, yyyy pp');
+    const updatedPost = { id, title: editTitle, datetime, body: editBody };
+    try {
+      const response = await api.put(`/posts/${id}`, updatedPost);
+      setPosts(posts.map(post => post.id === id ? { ...response.data } : post));
+      setEditTitle('');
+      setEditBody('');
+      history.push('/');
+    } catch (err) {
+      console.log(`Error: ${err.message}`);
+    }
+  }
 
   const handleDelete = async (id) => {
     try {
@@ -94,6 +105,19 @@ const handleEdit = async (id) => {
                 setPostTitle={setPostTitle}
                 postBody={postBody}
                 setPostBody={setPostBody}
+              />
+            }
+          />
+           <Route
+            path="edit"
+            element={
+              <Edit
+              posts={posts}
+                handleEdit={handleEdit}
+                editTitle={editTitle}
+                setEditTitle={setEditTitle}
+                editBody={editBody}
+                setEditBody={setEditBody}
               />
             }
           />
